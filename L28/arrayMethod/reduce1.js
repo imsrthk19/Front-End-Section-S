@@ -1,0 +1,9 @@
+let arr = [23,46,75,12,39];
+
+let reduceVal= arr.reduce((acc, item, ind, arr)=>{
+    // console.log("hello")
+    // console.log(item,ind,arr);
+    console.log(acc);
+    return ind*5;
+},0)
+console.log(reduceVal);

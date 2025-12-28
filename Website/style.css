@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.container img{
+    margin: 0;
+    padding: 0;
+    align-items: 10vw;
+    justify-content: 10vw;
+    height: auto;
+    width: 100%;
+}

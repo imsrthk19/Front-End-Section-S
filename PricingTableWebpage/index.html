@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pricing-table {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 25px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    /* Highlight Standard Plan */
+    .standard {
+      background: #e6f0ff;
+      border: 2px solid #007bff;
+      transform: scale(1.05);
+    }
+
+    .standard:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .pricing-table {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="pricing-table">
+    <!-- Basic Plan -->
+    <div class="card">
+      <h2>Basic</h2>
+      <p class="price">$9/month</p>
+      <ul>
+        <li>✔ 5GB Storage</li>
+        <li>✔ Single User</li>
+        <li>✔ Email Support</li>
+      </ul>
+      <a href="#" class="btn">Sign Up</a>
+    </div>
+
+    <!-- Standard Plan -->
+    <div class="card standard">
+      <h2>Standard</h2>
+      <p class="price">$19/month</p>
+      <ul>
+        <li>✔ 50GB Storage</li>
+        <li>✔ Up to 5 Users</li>
+        <li>✔ Priority Support</li>
+      </ul>
+      <a href="#" class="btn">Sign Up</a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="card">
+      <h2>Premium</h2>
+      <p class="price">$29/month</p>
+      <ul>
+        <li>✔ Unlimited Storage</li>
+        <li>✔ Unlimited Users</li>
+        <li>✔ 24/7 Support</li>
+      </ul>
+      <a href="#" class="btn">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>

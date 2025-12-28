@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Photo Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f2f2f2;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 32px;
+      font-weight: 700;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      z-index: 2;
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      border-radius: 16px 16px 0 0;
+      transition: filter 0.2s, transform 0.2s;
+    }
+    .card:hover img {
+      filter: brightness(0.7);
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: rgba(30, 30, 30, 0.4);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 16px 16px 0 0;
+    }
+    .card:hover .overlay {
+      opacity: 1;
+    }
+    .caption {
+      padding: 12px 16px;
+      background: #222;
+      color: #fff;
+      text-align: left;
+      font-size: 16px;
+      border-radius: 0 0 16px 16px;
+      font-family: 'Roboto', sans-serif;
+    }
+    @media (max-width: 992px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 767px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Photo Gallery</h1>
+  <div class="gallery">
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=1" alt="Nature 01">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 01</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Nature 02">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 02</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Nature 03">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 03</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=4" alt="Nature 04">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 04</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=5" alt="Nature 05">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 05</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=6" alt="Nature 06">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 06</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=7" alt="Nature 07">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 07</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=8" alt="Nature 08">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 08</div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=9" alt="Nature 09">
+      <div class="overlay">
+        <span>View Image</span>
+      </div>
+      <div class="caption">Nature 09</div>
+    </div>
+  </div>
+</body>
+</html>
